@@ -5,7 +5,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       AvailabilityZone: eu-west-1a
-      ImageId: ami-xxxxx
+      ImageId: ami-d13ef2a8
       InstanceType: t2.micro
       SecurityGroups:
         - !Ref SSHSecurityGroup
@@ -41,4 +41,4 @@ Resources:
       - IpProtocol: tcp
         FromPort: 22
         ToPort: 22
-        CidrIp: x.x.x.x/32
+        CidrIp: 172.31.0.0/32
