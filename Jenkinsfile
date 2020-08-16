@@ -9,7 +9,7 @@ pipeline {
         stage('Submit Stack') {
             steps {
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'aws-key3', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-             bat " aws cloudformation delete-stack --stack-name ec2-single-instance "
+             bat " aws cloudformation delete-stack --stack-name ec2-single-instance --region eu-west-1 "
                 }
               }
              }
